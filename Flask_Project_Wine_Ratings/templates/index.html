@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div>
+    <h1>Welcome to Wineometer's Homepage!</h1>
+    <h2>What this is:</h2>
+    <p>Use this API to convert your wine batch's chemical composition into a predicted wine rating! This exciting model has  </p>
+  </div>
+  <div>
+    <h2>Using the model:</h2>
+    <p>Post a request to "https://wine-o-meter-43164.herokuapp.com/predict" in a .json format. The .json should contain a list of datapoints, and each datapoint should contain a list of the wine's attributes.</p>
+    <p> You should submit your data in the following order: <BR> Fixed Acidity, Volatile Acidity, Citric Acid, Residual Sugar, Chlorides, Free Sulfur Dioxide, Total Sulfur Dioxide, Density, pH, Sulphates, Alcohol</p>
+    <p> Here are some input samples: <BR><BLOCKQUOTE>input_simple = {
+      "input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8]]
+  }<BR> input_multiple = {
+    "input": [[7.0, 0.27, 0.36, 20.7, 0.045, 45.0, 170.0, 1.001, 3.0, 0.45, 8.8],
+              [5.0, 0.98, 0.32, 18.9, 0.050, 75.0, 122.0, 0.401, 3.1, 0.21, 1.2]]
+}</BLOCKQUOTE></p>
+  </div>
+{% endblock %}
